@@ -28,12 +28,13 @@ footer {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    font-size: 18px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Rubik', sans-serif;
+  /*need it to scroll and stay pinned to bottom*/
+  position: relative;
+  bottom: 0;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Rubik', sans-serif;
 }
 
 footer p {
@@ -128,6 +129,10 @@ li {
   color: white;
 }
 
+.nutrients, .calories_burned {
+  color: black;
+}
+
 
 /*trying to get search boxes to line up*/
 #js-form, #js-exercise-form {
@@ -153,6 +158,10 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 4%;
+}
+
+.nutrients {
+  color: black;
 }
 
 a:link {

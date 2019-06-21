@@ -1,7 +1,23 @@
-function displayResults (responseJson) {
+'use strict';
+
+function displayNutrientResults (responseJson) {
     console.log(responseJson);
+    // if there are previous results, remove them
+    $('#results-list').empty();
+    // iterate through the foods array
+    for (let i = 0; i < responseJson.foods.length; i++){
+      $('#results-list').append(
+        //full name, description, website url
+        `<li class="nutrients"><h3>${responseJson.foods[i].food_name}</h3>
+            <p>Calories: ${responseJson.foods[i].nf_calories}</p>
+            <p>Protein: ${responseJson.foods[i].nf_protein}</p>
+            <p>Carbohydrates: ${responseJson.foods[i].nf_total_carbohydrate}</p>
+            <p>Fat: ${responseJson.foods[i].nf_total_fat}</p>
+        </li>`
+      )};
+    //display the results section  
     $('#results').removeClass('hidden');
-}
+  }
 
 function getFood (food) {
     /*let foodSearchQuery = $('#js-foodSearchInput').val();*/
@@ -27,7 +43,7 @@ function getFood (food) {
     .then(response => {
       return response.json();
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => displayNutrientResults(responseJson))
     .catch(error => {
       console.log(error);
     });
@@ -45,6 +61,22 @@ function getFood (food) {
       //part of an error object that is inherent in JavaScript
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });*/
+
+function displayExerciseResults (responseJson) {
+    console.log(responseJson);
+    // if there are previous results, remove them
+    $('#exercise-list').empty();
+    // iterate through the foods array
+    for (let i = 0; i < responseJson.exercises.length; i++){
+      $('#exercise-list').append(
+        //full name, description, website url
+        `<li class="calories_burned"><h3>${responseJson.exercises[i].user_input}</h3>
+            <p>Calories Burned: ${responseJson.exercises[i].nf_calories}</p>
+        </li>`
+      )};
+    //display the results section  
+    $('#exerciseResults').removeClass('hidden');
+  }
 
 function getExercise(exercise) {
     /*let foodSearchQuery = $('#js-foodSearchInput').val();*/
@@ -70,7 +102,7 @@ function getExercise(exercise) {
     .then(response => {
       return response.json();
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => displayExerciseResults(responseJson))
     .catch(error => {
       console.log(error);
     });
@@ -92,7 +124,5 @@ function watchForm() {
     getExercise(exerciseInput);
   })
 }
-
-
 
 $(watchForm);
