@@ -38,37 +38,44 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  flex-grow: 1;
+  /*flex-grow: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  height: 80px;
+  justify-content: space-evenly;*/
+  height: 100px;
   /*ensures navbar scrolls over hero image*/
   z-index: 1000;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .appTitle {
     text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .nav_links, /*go*/ {
   padding: 0;
+  margin-top: 0;
   display: flex;
   justify-content: space-evenly;
   align-content: center;
   flex-direction: row;
   align-items: center;
   font-size: 30px;
+  
 }
 
 .nav_links li {
     /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
-    margin-top: 10px;
     /*allows me to color and size font awesome icons*/
-    color: #0d47a1;
-    text-shadow: 1px 1px 1px white;
-    font-size: 1.5em;
+    color: #ffffff;
+    /*text-shadow: 1px 1px 1px white;*/
+    font-size: 1.25em;
   }
 
 /*to put full names of sites in desktop view, create span class or i class 
@@ -109,6 +116,34 @@ li {
   transform: translate(-50%, -50%);
   overflow: hidden;
   text-align: center;
+  color: white;
+}
+
+.js-form {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.go {
+  border: 2px solid orangered;
+  height: 30px;
+  background-color: orangered;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4%;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
   color: white;
 }
   
