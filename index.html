@@ -15,7 +15,9 @@
 </head>
 <body>
     <nav role="navigation">
-        <h1 class="appTitle">EatKlean</h1>
+        <header class="first">
+            <h1 class="appTitle">EatKlean</h1>
+        </header>
         <ul class="nav_links">
             <li><a href="mailto:will.golinkin@gmail.com" target="_blank"><i class="far fa-envelope"></i><span class="fullSiteName">Email</span></a></li>
             <li><a href="https://github.com/willgolinkin" target="_blank"><i class="fab fa-github-square"></i><span class="fullSiteName">Github</span></a></li>
@@ -32,12 +34,12 @@
         <h1>Food and Exercise Search</h1>
         <form id="js-form">
             <label for="foodSearchInput">Search Food</label>
-            <input type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
+            <input class= "searchFood" type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
 
             <!--<label for="max-results">Maximum results to return</label>
             <input type="number" name="max-results" id="js-max-results" value="10">-->
 
-            <input type="submit" value="Go!">
+            <input type="submit" class="go" value="Go!">
         </form>
         <div class="results"></div>
             <p id="js-error-message" class="error-message"></p>
