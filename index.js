@@ -62,6 +62,22 @@ function getFood (food) {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });*/
 
+function displayExerciseResults (responseJson) {
+    console.log(responseJson);
+    // if there are previous results, remove them
+    $('#exercise-list').empty();
+    // iterate through the foods array
+    for (let i = 0; i < responseJson.exercises.length; i++){
+      $('#exercise-list').append(
+        //full name, description, website url
+        `<li class="calories_burned"><h3>${responseJson.exercises[i].user_input}</h3>
+            <p>Calories Burned: ${responseJson.exercises[i].nf_calories}</p>
+        </li>`
+      )};
+    //display the results section  
+    $('#exerciseResults').removeClass('hidden');
+  }
+
 function getExercise(exercise) {
     /*let foodSearchQuery = $('#js-foodSearchInput').val();*/
     const key = '1f2cf89d3bcd0b21bf0dc8a2c0432300';
@@ -86,7 +102,7 @@ function getExercise(exercise) {
     .then(response => {
       return response.json();
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => displayExerciseResults(responseJson))
     .catch(error => {
       console.log(error);
     });

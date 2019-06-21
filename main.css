@@ -28,12 +28,13 @@ footer {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    font-size: 18px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Rubik', sans-serif;
+  /*need it to scroll and stay pinned to bottom*/
+  position: relative;
+  bottom: 0;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Rubik', sans-serif;
 }
 
 footer p {
@@ -126,6 +127,10 @@ li {
   overflow: hidden;
   text-align: center;
   color: white;
+}
+
+.nutrients, .calories_burned {
+  color: black;
 }
 
 
