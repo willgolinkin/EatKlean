@@ -8,8 +8,11 @@ function displayNutrientResults (responseJson) {
     for (let i = 0; i < responseJson.foods.length; i++){
       $('#results-list').append(
         //full name, description, website url
-        `<li class="nutrients"><h3>${responseJson.foods[0].food_name}</h3>
-        <p>Calories: ${responseJson.foods[0].nf_calories}</p>
+        `<li class="nutrients"><h3>${responseJson.foods[i].food_name}</h3>
+            <p>Calories: ${responseJson.foods[i].nf_calories}</p>
+            <p>Protein: ${responseJson.foods[i].nf_protein}</p>
+            <p>Carbohydrates: ${responseJson.foods[i].nf_total_carbohydrate}</p>
+            <p>Fat: ${responseJson.foods[i].nf_total_fat}</p>
         </li>`
       )};
     //display the results section  
