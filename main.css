@@ -30,6 +30,15 @@ footer {
 footer {
     position: absolute;
     bottom: 0;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+}
+
+footer p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 nav {
@@ -142,6 +151,10 @@ a:link {
   color: white;
 }
 
+a.emailMe {
+  color: blue;
+}
+
 a:visited {
   text-decoration: none;
   color: white;
@@ -172,6 +185,6 @@ a:visited {
     display: none;
   }
 
-  .emailMe {
+  /*.emailMe {
       text-decoration: none;
-  }
+  }*/

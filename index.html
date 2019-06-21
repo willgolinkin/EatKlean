@@ -49,11 +49,27 @@
                 </ul>
             </section>
         </div>
+        <form id="js-form">
+            <label for="exerciseSearchInput">Search Exercises</label>
+            <input class= "searchExercise" type="text" name="exerciseSearchInput" placeholder="ran 3 miles" id="js-exerciseSearchInput" required>
+
+            <!--<label for="max-results">Maximum results to return</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">-->
+
+            <input type="submit" class="go" value="Go!">
+        </form>
+        <div class="results"></div>
+            <p id="js-error-message" class="error-message"></p>
+            <section id="results" class="hidden">
+                <h2>Search results</h2>
+                <ul id="results-list">
+                </ul>
+            </section>
+        </div>
     </main>
     <footer role="content-info">
-            <p>© Will Golinkin 2019<br/>
-                <br/>
-                <a class="emailMe" href="mailto:will.golinkin@gmail.com" target="_blank">Email me</a>
+            <p>© Will Golinkin 2019<br>
+                <p>Need help or have feedback? <a class="emailMe" href="mailto:will.golinkin@gmail.com" target="_blank">Email me</a></p>
             </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
