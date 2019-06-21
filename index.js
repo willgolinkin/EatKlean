@@ -1,7 +1,20 @@
-function displayResults (responseJson) {
+'use strict';
+
+function displayNutrientResults (responseJson) {
     console.log(responseJson);
+    // if there are previous results, remove them
+    $('#results-list').empty();
+    // iterate through the foods array
+    for (let i = 0; i < responseJson.foods.length; i++){
+      $('#results-list').append(
+        //full name, description, website url
+        `<li class="nutrients"><h3>${responseJson.foods[0].food_name}</h3>
+        <p>Calories: ${responseJson.foods[0].nf_calories}</p>
+        </li>`
+      )};
+    //display the results section  
     $('#results').removeClass('hidden');
-}
+  }
 
 function getFood (food) {
     /*let foodSearchQuery = $('#js-foodSearchInput').val();*/
@@ -27,7 +40,7 @@ function getFood (food) {
     .then(response => {
       return response.json();
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => displayNutrientResults(responseJson))
     .catch(error => {
       console.log(error);
     });
@@ -92,7 +105,5 @@ function watchForm() {
     getExercise(exerciseInput);
   })
 }
-
-
 
 $(watchForm);

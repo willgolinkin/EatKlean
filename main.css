@@ -155,6 +155,10 @@ li {
   border-radius: 4%;
 }
 
+.nutrients {
+  color: black;
+}
+
 a:link {
   text-decoration: none;
   color: white;
