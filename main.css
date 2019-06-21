@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+  
+body, html {
+  font-family: 'Karla', sans-serif; 
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+main {
+  /*sets line spacing to desired range of 120-150%*/
+  line-height: 150%;
+  /*off-white background-color for contrast with screenshots*/
+  background-color: #fafafa;
+}
+
+nav,
+footer {
+  padding: 1% 0;
+  background-color:#5EB325;
+  width: 100%;
+  color: white;
+  border-radius: 1%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+nav {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80px;
+  /*ensures navbar scrolls over hero image*/
+  z-index: 1000;
+}
+
+.appTitle {
+    text-transform: uppercase;
+}
+
+.nav_links, /*go*/ {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30px;
+}
+
+.nav_links li {
+    /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
+    margin-top: 10px;
+    /*allows me to color and size font awesome icons*/
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px white;
+    font-size: 1.5em;
+  }
+
+/*to put full names of sites in desktop view, create span class or i class 
+html and then display: hidden in mobile mode*/
+
+li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+}
+  
+/*.fa-github-square {
+  padding-left:40px;
+  padding-right: 40px;
+}*/
+
+.hero-image {
+  margin-top: 74px;
+  position: relative;
+  height: 300px;
+  /*allows for cutting of image with resizing*/  
+  overflow: hidden;
+  /*adds black tint to image to make text stand out*/
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("Img Assets\\healthy-food_compressed_hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  font-family: 'Merriweather Sans', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+  
+  button, input[type="text"] {
+    padding: 5px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .error-message {
+      color: red;
+  }
+
+  .results-List {
+      list-style: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .emailMe {
+      text-decoration: none;
+  }
