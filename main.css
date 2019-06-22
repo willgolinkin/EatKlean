@@ -81,11 +81,11 @@ nav {
 }
 
 .nav_links li {
-    /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
-    /*allows me to color and size font awesome icons*/
-    color: #ffffff;
-    /*text-shadow: 1px 1px 1px white;*/
-    font-size: 1.25em;
+  /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
+  /*allows me to color and size font awesome icons*/
+  color: #ffffff;
+  /*text-shadow: 1px 1px 1px white;*/
+  font-size: 1.25em;
   }
 
 /*to put full names of sites in desktop view, create span class or i class 
@@ -136,7 +136,7 @@ li {
 
 /*trying to get search boxes to line up*/
 #js-form, #js-exercise-form {
-  font-size: 15px;
+  font-size: 18px;
   padding: 5px;
   text-align: center;
 }
@@ -160,8 +160,16 @@ li {
   border-radius: 4%;
 }
 
-.nutrients {
+#results-list, #exercise-list {
+  padding: 0;
+}
+
+.nutrients, .calories_burned {
   color: black;
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 a:link {
@@ -178,31 +186,31 @@ a:visited {
   color: white;
 }
   
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-      color: red;
-  }
+button, input[type="text"] {
+  padding: 5px;
+}
 
-  .results-List {
-      list-style: none;
-  }
-  
-  .hidden {
-    display: none;
-  }
+button:hover {
+  cursor: pointer;
+}
 
-  /*.emailMe {
-      text-decoration: none;
-  }*/
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message {
+    color: red;
+}
+
+.results-List {
+    list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*.emailMe {
+    text-decoration: none;
+}*/
