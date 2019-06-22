@@ -1,3 +1,11 @@
+/*
+pending design changes:
+-pin footer to bottom of page
+-display input and label correctly in both mobile and desktop
+-make hamburger nav for contact info at the top (or hide fullSiteName)
+-make hero img text h1 size when at desktop view and h2 size when at mobile view
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +14,8 @@ body, html {
   font-family: 'Karla', sans-serif; 
   color: black;
   text-align: center;
+  /*for sticky footer*/
+  height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -15,11 +25,10 @@ main {
   /*sets line spacing to desired range of 120-150%*/
   line-height: 150%;
   /*off-white background-color for contrast with screenshots*/
-  background-color: #fafafa;
+  background-color: white;
 }
 
-nav,
-footer {
+nav {
   padding: 1% 0;
   background-color:#5EB325;
   width: 100%;
@@ -27,11 +36,27 @@ footer {
   border-radius: 1%;
 }
 
-footer {
-  /*need it to scroll and stay pinned to bottom*/
+#page-container {
   position: relative;
-  bottom: 0;
+  min-height: 100%;
+  /*margin-bottom: -50px;*/
+}
+
+#content-wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  /*need it to scroll and stay pinned to bottom
+  position: absolute;
+  bottom: 0;*/
   font-size: 18px;
+  background-color:#5EB325;
+  width: 100%;
+  color: white;
+  border-radius: 1%;
+  margin-top: 80px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-family: 'Rubik', sans-serif;
@@ -81,11 +106,11 @@ nav {
 }
 
 .nav_links li {
-    /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
-    /*allows me to color and size font awesome icons*/
-    color: #ffffff;
-    /*text-shadow: 1px 1px 1px white;*/
-    font-size: 1.25em;
+  /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));*/
+  /*allows me to color and size font awesome icons*/
+  color: #ffffff;
+  /*text-shadow: 1px 1px 1px white;*/
+  font-size: 1.25em;
   }
 
 /*to put full names of sites in desktop view, create span class or i class 
@@ -116,6 +141,7 @@ li {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 15px;
 }
 
 .container {
@@ -133,26 +159,32 @@ li {
   color: black;
 }
 
-
-/*trying to get search boxes to line up*/
-#js-form, #js-exercise-form {
-  font-size: 15px;
-  padding: 5px;
-  text-align: center;
+/*need help figuring a way to stack in mobile and inline block in desktop*/
+.label {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-/*to line up search bars*/
-.foodsearchlabel {
-  padding-left: 10px;
-  padding-right: 20px;
+input[type=text], select {
+  width:100%;
+  background-color: whitesmoke;
+  color: black;
+  padding: 14px 20px;
+  font-size: 16px;
+  margin: 8px 0;
+  border: 2px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.go {
+input[type=submit] {
   border: 2px solid orangered;
+  width: 100px;
   height: 30px;
   background-color: orangered;
-  color: #ffffff;
-  font-size: 15px;
+  color: white;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -160,8 +192,16 @@ li {
   border-radius: 4%;
 }
 
-.nutrients {
+#results-list, #exercise-list {
+  padding: 0;
+}
+
+.nutrients, .calories_burned {
   color: black;
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 a:link {
@@ -178,31 +218,39 @@ a:visited {
   color: white;
 }
   
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-      color: red;
-  }
+button, input[type="text"] {
+  padding: 5px;
+}
 
-  .results-List {
-      list-style: none;
-  }
-  
-  .hidden {
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message {
+    color: red;
+}
+
+.results-List {
+    list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*iPhone X */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+  .fullSiteName {
     display: none;
   }
+}
+  
 
-  /*.emailMe {
-      text-decoration: none;
-  }*/
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+  /* Styles */
+}
