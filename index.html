@@ -14,65 +14,68 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <nav role="navigation">
-        <header class="first">
-            <h1 class="appTitle">EatKlean</h1>
-        </header>
-        <ul class="nav_links">
-            <li><a href="mailto:will.golinkin@gmail.com" target="_blank"><i class="far fa-envelope"></i><span class="fullSiteName">Email</span></a></li>
-            <li><a href="https://github.com/willgolinkin" target="_blank"><i class="fab fa-github-square"></i><span class="fullSiteName">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/will-golinkin/" target="_blank"><i class="fab fa-linkedin"></i><span class="fullSite">LinkedIn</span></a></li>
-        </ul>
-    </nav>
-    <header class="hero-image" role="banner">
-        <div class="container">
-                <h1><span>Find out how many calories you consumed and how many you burned!</span></h1>
-                <h2></h2>
-        </div>
-    </header>
-    <main role="main">
-        <h1>Food and Exercise Search</h1>
-        <form id="js-form">
-            <label class="foodsearchlabel" for="foodSearchInput">Search Food:</label>
-            <input class= "searchFood" type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
-
-            <!--<label for="max-results">Maximum results to return</label>
-            <input type="number" name="max-results" id="js-max-results" value="10">-->
-
-            <input type="submit" class="go" value="Go!">
-        </form>
-        <div class="results"></div>
-            <p id="js-error-message" class="error-message"></p>
-            <section id="results" class="hidden">
-                <h2>Nutrition Facts</h2>
-                <ul id="results-list">
+    <div id="page-container">
+        <div id="content-wrap">
+            <nav role="navigation">
+                <header class="first">
+                    <h1 class="appTitle">EatKlean</h1>
+                </header>
+                <ul class="nav_links">
+                    <li><a href="mailto:will.golinkin@gmail.com" target="_blank"><i class="far fa-envelope"></i><span class="fullSiteName">Email</span></a></li>
+                    <li><a href="https://github.com/willgolinkin" target="_blank"><i class="fab fa-github-square"></i><span class="fullSiteName">Github</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/will-golinkin/" target="_blank"><i class="fab fa-linkedin"></i><span class="fullSiteName">LinkedIn</span></a></li>
                 </ul>
-            </section>
-        </div>
-        <form id="js-exercise-form">
-            <label class="label" for="exerciseSearchInput">Search Exercises:</label>
-            <input class= "searchExercise" type="text" name="exerciseSearchInput" placeholder="ran 3 miles" id="js-exerciseSearchInput" required>
+            </nav>
+            <header class="hero-image" role="banner">
+                <div class="container">
+                    <h2><span>Find out how many calories you consumed and how many you burned!</span></h2>
+                </div>
+            </header>
+            <main role="main">
+                <!--<h1>Food and Exercise Search</h1>-->
+                <form id="js-form">
+                    <label class="label" for="foodSearchInput">Search Food:</label>
+                    <input class= "searchFood" type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
 
-            <!--<label for="max-results">Maximum results to return</label>
-            <input type="number" name="max-results" id="js-max-results" value="10">-->
+                    <!--<label for="max-results">Maximum results to return</label>
+                    <input type="number" name="max-results" id="js-max-results" value="10">-->
 
-            <input type="submit" class="go" value="Go!">
-        </form>
-        <div class="exercise_results"></div>
-            <p id="js-error-message" class="error-message"></p>
-            <section id="exerciseResults" class="hidden">
-                <h2>Calories Burned</h2>
-                <ul id="exercise-list">
-                </ul>
-            </section>
+                    <input type="submit" class="go" value="Go!">
+                </form>
+                <div class="results"></div>
+                    <p id="js-error-message" class="error-message"></p>
+                    <section id="results" class="hidden">
+                        <h2>Nutrition Facts</h2>
+                        <ul id="results-list">
+                        </ul>
+                    </section>
+                </div>
+                <form id="js-exercise-form">
+                    <label class="label" for="exerciseSearchInput">Search Exercises:</label>
+                    <input class= "searchExercise" type="text" name="exerciseSearchInput" placeholder="ran 3 miles" id="js-exerciseSearchInput" required>
+
+                    <!--<label for="max-results">Maximum results to return</label>
+                    <input type="number" name="max-results" id="js-max-results" value="10">-->
+
+                    <input type="submit" class="go" value="Go!">
+                </form>
+                <div class="exercise_results"></div>
+                    <p id="js-error-message" class="error-message"></p>
+                    <section id="exerciseResults" class="hidden">
+                        <h2>Calories Burned</h2>
+                        <ul id="exercise-list">
+                        </ul>
+                    </section>
+                </div>
+            </main>
+            <footer role="content-info">
+                    <p>© Will Golinkin 2019<br>
+                        <p>Need help or have feedback? <a class="emailMe" href="mailto:will.golinkin@gmail.com" target="_blank">Email me</a></p>
+                    </p>
+            </footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+            <script src="index.js"></script>
         </div>
-    </main>
-    <footer role="content-info">
-            <p>© Will Golinkin 2019<br>
-                <p>Need help or have feedback? <a class="emailMe" href="mailto:will.golinkin@gmail.com" target="_blank">Email me</a></p>
-            </p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    </div>
 </body>
 </html>
