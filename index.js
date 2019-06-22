@@ -45,6 +45,7 @@ function getFood (food) {
     })
     .then(responseJson => displayNutrientResults(responseJson))
     .catch(error => {
+      $('#js-error-message').text(`Something went wrong: ${error.message}`);
       console.log(error);
     });
 };
@@ -104,6 +105,7 @@ function getExercise(exercise) {
     })
     .then(responseJson => displayExerciseResults(responseJson))
     .catch(error => {
+      $('#js-error-message').text(`Something went wrong: ${error.message}`);
       console.log(error);
     });
 };
