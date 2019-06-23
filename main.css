@@ -7,7 +7,10 @@ pending design changes:
 */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  /*normalize margins and padding*/
+  margin: 0;
+  padding; 0;
 }
   
 body, html {
@@ -24,8 +27,6 @@ body, html {
 main {
   /*sets line spacing to desired range of 120-150%*/
   line-height: 150%;
-  /*off-white background-color for contrast with screenshots*/
-  background-color: white;
 }
 
 nav {
@@ -81,28 +82,25 @@ nav {
   height: 100px;
   /*ensures navbar scrolls over hero image*/
   z-index: 1000;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .appTitle {
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
-.nav_links, /*go*/ {
+.nav_links {
   padding: 0;
-  margin-top: 0;
+  margin: 5px, 0;
   display: flex;
   justify-content: space-evenly;
   align-content: center;
   flex-direction: row;
   align-items: center;
-  font-size: 30px;
-  
+  font-size: 16px;
 }
 
 .nav_links li {
@@ -166,7 +164,14 @@ li {
   font-weight: bold;
 }
 
+.form-wrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 input[type=text], select {
+  text-align: center;
   width:100%;
   background-color: whitesmoke;
   color: black;
@@ -232,11 +237,11 @@ button:hover {
 }
 
 .error-message {
-    color: red;
+  color: red;
 }
 
 .results-List {
-    list-style: none;
+  list-style: none;
 }
 
 .hidden {
