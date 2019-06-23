@@ -1,9 +1,6 @@
 /*
 pending design changes:
--pin footer to bottom of page
--display input and label correctly in both mobile and desktop
 -make hamburger nav for contact info at the top (or hide fullSiteName)
--make hero img text h1 size when at desktop view and h2 size when at mobile view
 */
 
 * {
@@ -278,6 +275,7 @@ button:hover {
 /*@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)*/
  /* for any screen larger than 630px*/
 @media screen and (max-width: 630px) {
+  /*hides fullSiteNames below 630px width*/
   li span {
     display: none;
   }
