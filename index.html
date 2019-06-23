@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search Food with Nutritionix</title>
+    <link rel="stylesheet" href="Normalize_CSS/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="main.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla|Merriweather+Sans|Rubik&display=swap" rel="stylesheet">
@@ -33,15 +34,17 @@
             </header>
             <main role="main">
                 <!--<h1>Food and Exercise Search</h1>-->
-                <form id="js-form">
-                    <label class="label" for="foodSearchInput">Search Food:</label>
-                    <input class= "searchFood" type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
+                <div class="form-wrapper">
+                    <form id="js-form">
+                        <label class="label" for="foodSearchInput">Search Food:</label>
+                        <input class= "searchFood" type="text" name="foodSearchInput" placeholder="8 oz of chicken" id="js-foodSearchInput" required>
 
-                    <!--<label for="max-results">Maximum results to return</label>
-                    <input type="number" name="max-results" id="js-max-results" value="10">-->
+                        <!--<label for="max-results">Maximum results to return</label>
+                        <input type="number" name="max-results" id="js-max-results" value="10">-->
 
-                    <input type="submit" class="go" value="Go!">
-                </form>
+                        <input type="submit" class="go" value="Go!">
+                    </form>
+                </div>
                 <div class="results"></div>
                     <p id="js-error-message" class="error-message"></p>
                     <section id="results" class="hidden">
@@ -50,15 +53,17 @@
                         </ul>
                     </section>
                 </div>
-                <form id="js-exercise-form">
-                    <label class="label" for="exerciseSearchInput">Search Exercises:</label>
-                    <input class= "searchExercise" type="text" name="exerciseSearchInput" placeholder="ran 3 miles" id="js-exerciseSearchInput" required>
+                <div class="form-wrapper">
+                    <form id="js-exercise-form">
+                        <label class="label" for="exerciseSearchInput">Search Exercises:</label>
+                        <input class= "searchExercise" type="text" name="exerciseSearchInput" placeholder="ran 3 miles" id="js-exerciseSearchInput" required>
 
-                    <!--<label for="max-results">Maximum results to return</label>
-                    <input type="number" name="max-results" id="js-max-results" value="10">-->
+                        <!--<label for="max-results">Maximum results to return</label>
+                        <input type="number" name="max-results" id="js-max-results" value="10">-->
 
-                    <input type="submit" class="go" value="Go!">
-                </form>
+                        <input type="submit" class="go" value="Go!">
+                    </form>
+                </div>
                 <div class="exercise_results"></div>
                     <p id="js-error-message" class="error-message"></p>
                     <section id="exerciseResults" class="hidden">
