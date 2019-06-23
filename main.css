@@ -144,7 +144,7 @@ li {
 }
 
 .container {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,6 +152,12 @@ li {
   overflow: hidden;
   text-align: center;
   color: white;
+}
+
+.hero-text {
+  text-transform: uppercase;
+  /*responsive text sizing*/
+  font-size: calc(24px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .nutrients, .calories_burned {
@@ -269,9 +275,15 @@ button:hover {
 }
 
 /*iPhone X */
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-  .fullSiteName {
+/*@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)*/
+ /* for any screen larger than 630px*/
+@media screen and (max-width: 630px) {
+  li span {
     display: none;
+  }
+
+  .form-wrapper {
+    width: 75%;
   }
 }
   

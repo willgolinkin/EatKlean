@@ -49,19 +49,6 @@ function getFood (food) {
       console.log(error);
     });
 };
-      
-/*fetch(url)
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error(response.statusText);
-    })
-    .then(responseJson => displayResults(responseJson))
-    .catch(err => {
-      //part of an error object that is inherent in JavaScript
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
-    });*/
 
 function displayExerciseResults (responseJson) {
     console.log(responseJson);
@@ -105,6 +92,7 @@ function getExercise(exercise) {
     })
     .then(responseJson => displayExerciseResults(responseJson))
     .catch(error => {
+      //error not working for random string of exercise
       $('#js-error-message').text(`Something went wrong: ${error.message}`);
       console.log(error);
     });
