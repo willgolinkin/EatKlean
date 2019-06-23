@@ -57,7 +57,7 @@ footer {
   width: 100%;
   color: white;
   border-radius: 1%;
-  margin-top: 80px;
+  /*margin-top: 80px;*/
   padding-top: 5px;
   padding-bottom: 5px;
   font-family: 'Rubik', sans-serif;
@@ -205,8 +205,26 @@ input[type=submit] {
   color: black;
 }
 
-h2 {
-  text-transform: uppercase;
+.results {
+  margin: 10px auto 10px auto;
+}
+
+.nutrients, .calories_burned {
+  margin: 10px auto 10px auto;
+}
+
+.resultsHeader {
+  /*text-transform: uppercase;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #5EB325;
+  /*background-color: #5EB325;*/
+  width: 225px;
+  font-family: 'Rubik', sans-serif;
+  /*border: 1px solid black;
+  border-radius: 4px;*/
 }
 
 a:link {
