@@ -271,8 +271,7 @@ button:hover {
   display: none;
 }
 
-/*iPhone X */
-/*@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)*/
+
  /* for any screen larger than 630px*/
 @media screen and (max-width: 630px) {
   /*hides fullSiteNames below 630px width*/
@@ -285,7 +284,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
   /*hides desktopNav*/
   #desktop_nav {
     display: none;
@@ -323,11 +322,6 @@ button:hover {
     font-family: 'Karla', sans-serif;
   }
 
-  .active {
-    text-transform: uppercase;
-    font-size: 26px;
-  }
-
   /* Style the hamburger menu */
   .hamburgerNav a.icon {
     background: #5EB325;
@@ -341,14 +335,15 @@ button:hover {
 
   /* Add a grey background color on mouse-over */
   .fa-bars a:hover {
-    background-color: blue;
-    color: #5EB325;
+    color: blue;
   }
 
   /* Style the active link (or home/logo) */
   .active {
     background-color: #4CAF50;
     color: white;
+    text-transform: uppercase;
+    font-size: 26px;
   }
 
   .hero-image {
