@@ -98,10 +98,12 @@ function getExercise(exercise) {
     });
 };
 
+
+//uses innerWidth method as a conditional for displaying hamburger nav
 function showHamburgerNav () {
   let hamburger = document.getElementById("hamburgerNav");
-  let desktopNav = document.getElementById("desktop_nav");
-  if (window.innerWidth <= 370) {
+  //let desktopNav = document.getElementById("desktop_nav");
+  if (window.innerWidth <= 375) {
       hamburger.display === "block";
     } else {
       hamburger.display === "none";
@@ -123,9 +125,7 @@ function watchForm() {
     event.preventDefault();
     const foodInput = $('#js-foodSearchInput').val();
     console.log(foodInput);
-    //const maxResults = $('#js-max-results').val();
-    //console.log(maxResults);
-    getFood(foodInput/*, maxResults*/);
+    getFood(foodInput);
   })
   $('#js-exercise-form').submit(event => {
     event.preventDefault();
