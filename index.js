@@ -98,6 +98,26 @@ function getExercise(exercise) {
     });
 };
 
+function showHamburgerNav () {
+  let hamburger = document.getElementById("hamburgerNav");
+  let desktopNav = document.getElementById("desktop_nav");
+  if (window.innerWidth <= 370) {
+      hamburger.display === "block";
+    } else {
+      hamburger.display === "none";
+    }
+}
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function toggleNavLinks() {
+  let hamburgerLinks = document.getElementById("myLinks");
+  if (hamburgerLinks.style.display === "block") {
+    hamburgerLinks.style.display = "none";
+  } else {
+    hamburgerLinks.style.display = "block";
+  }
+}
+
 function watchForm() {
   $('#js-form').submit(event => {
     event.preventDefault();
