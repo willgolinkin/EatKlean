@@ -12,12 +12,27 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
     crossorigin="anonymous">
+    <!--font awesome hamburger nav icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <nav role="navigation">
+            <div id="hamburgerNav" class="topnav">
+                <a href="#home" class="active">EatKlean</a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <a href="mailto:will.golinkin@gmail.com" target="_blank">Email</a>
+                    <a href="https://github.com/willgolinkin" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/will-golinkin/" target="_blank">LinkedIn</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav id="desktop_nav" role="navigation">
                 <header class="first">
                     <h1 class="appTitle">EatKlean</h1>
                 </header>
