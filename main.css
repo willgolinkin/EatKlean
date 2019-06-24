@@ -296,7 +296,7 @@ button:hover {
   }
 
   /* Style the hamburger navigation menu */
-  .topnav {
+  .hamburgerNav {
     display: block;
     overflow: hidden;
     position: relative;
@@ -308,12 +308,12 @@ button:hover {
   }
 
   /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
+  .hamburgerNav #myLinks {
     display: none;
   }
 
   /* Style navigation menu links */
-  .topnav a {
+  .hamburgerNav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -323,8 +323,13 @@ button:hover {
     font-family: 'Karla', sans-serif;
   }
 
+  .active {
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+
   /* Style the hamburger menu */
-  .topnav a.icon {
+  .hamburgerNav a.icon {
     background: #5EB325;
     display: block;
     position: absolute;
@@ -335,9 +340,9 @@ button:hover {
   }
 
   /* Add a grey background color on mouse-over */
-  .fa-fa-bars a:hover {
-    background-color: #ddd;
-    color: black;
+  .fa-bars a:hover {
+    background-color: blue;
+    color: #5EB325;
   }
 
   /* Style the active link (or home/logo) */

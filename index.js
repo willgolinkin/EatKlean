@@ -99,22 +99,22 @@ function getExercise(exercise) {
 };
 
 function showHamburgerNav () {
-  let topNav = document.getElementById("hamburgerNav");
+  let hamburger = document.getElementById("hamburgerNav");
   let desktopNav = document.getElementById("desktop_nav");
   if (window.innerWidth <= 370) {
-    topNav.display === "block";
+      hamburger.display === "block";
     } else {
-      topNav.display === "none";
+      hamburger.display === "none";
     }
 }
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+function toggleNavLinks() {
+  let hamburgerLinks = document.getElementById("myLinks");
+  if (hamburgerLinks.style.display === "block") {
+    hamburgerLinks.style.display = "none";
   } else {
-    x.style.display = "block";
+    hamburgerLinks.style.display = "block";
   }
 }
 
