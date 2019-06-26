@@ -50,6 +50,49 @@ function getFood (food) {
     });
 };
 
+//display results of Yelp Search:
+/*function displayYelpSearchResults() {
+  console.log(responseJson);
+}*/
+
+//format the Yelp query string
+function formatQueryParams(params) {
+  const queryItems = Object.keys(params)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+  return queryItems.join('&');
+  console.log(queryItems);
+};
+
+//using the CORS anywhere via AJAX, I am able to work around the lack of 
+//CORS in the Yelp Fusion API (https://cors-anywhere.herokuapp.com/)
+function getYelpSearchCORS() {
+  const key = 'Bearer e22MteLr3U7vSCAvs8z_IW1D4idyatIKLL7Nu9_A8WNLQK0zwAUTsHQPQAt-ETB8wZ-75nBmsAWlTSH_jhJSQ1s97dlsweUolaz47V1gF7Q8wTExQRFOZ0TS_IsRXXYx';
+  const originalURL = 'https://api.yelp.com/v3/businesses/search';
+  const params = {
+    term: 'Greek',
+    location: 'Baltimore'
+  };
+  const queryString = formatQueryParams(params);
+  const queryURL = "https://cors-anywhere.herokuapp.com/" + originalURL + '?' + queryString;
+  console.log(queryURL);
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+    dataType: "json",
+    headers: {
+      "x-requested-with": "xhr",
+      "Authorization": `${key}`,
+      "Content-Type": "application/json"
+    }
+  }).done(function(response) {
+    console.log('CORS anywhere response', response);
+    //add displayYelpResults to this
+  }).fail(function(jqXHR, textStatus) {
+    console.error(textStatus);
+  })
+}
+
+//Nutritionix Natural Exercise API Call
 function displayExerciseResults (responseJson) {
     console.log(responseJson);
     // if there are previous results, remove them
@@ -98,6 +141,7 @@ function getExercise(exercise) {
     });
 };
 
+//add YouTube code here:
 
 //uses innerWidth method as a conditional for displaying hamburger nav
 function showHamburgerNav () {
@@ -133,6 +177,10 @@ function watchForm() {
     console.log(exerciseInput);
     getExercise(exerciseInput);
   })
+
+  //just trying to validate response
+  //$('#js-yelp-form').submit(event)
+  getYelpSearchCORS();
 }
 
 $(watchForm);
