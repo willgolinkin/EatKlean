@@ -104,7 +104,7 @@ li {
   font-size: 100%;
   padding-left: 5px;
   padding-right: 5px;
-  color: white;
+  /*color: white;*/
 }
 
 .hero-image {
@@ -139,7 +139,7 @@ li {
   font-size: calc(24px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
-.nutrients, .calories_burned {
+.nutrients, .calories_burned, .yelp_search_results {
   color: black;
 }
 
@@ -212,7 +212,7 @@ input[type=submit] {
 
 a:link {
   text-decoration: none;
-  color: white;
+  color: blue;
 }
 
 a.emailMe {
@@ -221,7 +221,7 @@ a.emailMe {
 
 a:visited {
   text-decoration: none;
-  color: white;
+  color: purple;
 }
   
 button, input[type="text"] {

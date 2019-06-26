@@ -1,5 +1,8 @@
 'use strict';
 
+/*add yelp logo, fix styling for yelp input bars (block on mobile, inline on desktop), 
+fix link colors in footer, add yelp functionality to hero text p, add max results to display to yelp*/
+
 function displayNutrientResults (responseJson) {
     console.log(responseJson);
     // if there are previous results, remove them
@@ -51,9 +54,23 @@ function getFood (food) {
 };
 
 //display results of Yelp Search:
-/*function displayYelpSearchResults() {
-  console.log(responseJson);
-}*/
+function displayYelpResults (responseJson) {
+    console.log(responseJson);
+    // if there are previous results, remove them
+    $('#yelp-list').empty();
+    // iterate through the foods array
+    for (let i = 0; i < responseJson.businesses.length; i++){
+      $('#yelp-list').append(
+        //full name, description, website url
+        `<li class="yelp_search_results"><h3>${responseJson.businesses[i].name}</h3>
+            <p>Yelp Rating: ${responseJson.businesses[i].rating}</p>
+            <p>Address: ${responseJson.businesses[i].location}</p>
+            <p>Website: <a href=${responseJson.businesses[i].url}" target="blank">Restaurant Website</a></p>
+        </li>`
+      )};
+    //display the results section  
+    $('#yelpResults').removeClass('hidden');
+}
 
 //format the Yelp query string
 function formatQueryParams(params) {
@@ -65,12 +82,14 @@ function formatQueryParams(params) {
 
 //using the CORS anywhere via AJAX, I am able to work around the lack of 
 //CORS in the Yelp Fusion API (https://cors-anywhere.herokuapp.com/)
-function getYelpSearchCORS() {
+function getYelpSearchCORS(cuisine, location) {
   const key = 'Bearer e22MteLr3U7vSCAvs8z_IW1D4idyatIKLL7Nu9_A8WNLQK0zwAUTsHQPQAt-ETB8wZ-75nBmsAWlTSH_jhJSQ1s97dlsweUolaz47V1gF7Q8wTExQRFOZ0TS_IsRXXYx';
   const originalURL = 'https://api.yelp.com/v3/businesses/search';
+  let cuisineInput = $('#js-yelpCuisineSearchInput').val()
+  let locationInput = $('#js-yelpLocationSearchInput').val()
   const params = {
-    term: 'Greek',
-    location: 'Baltimore'
+    term: `${cuisineInput}`,
+    location: `${locationInput}`
   };
   const queryString = formatQueryParams(params);
   const queryURL = "https://cors-anywhere.herokuapp.com/" + originalURL + '?' + queryString;
@@ -86,7 +105,7 @@ function getYelpSearchCORS() {
     }
   }).done(function(response) {
     console.log('CORS anywhere response', response);
-    //add displayYelpResults to this
+    displayYelpResults(response);
   }).fail(function(jqXHR, textStatus) {
     console.error(textStatus);
   })
@@ -177,10 +196,13 @@ function watchForm() {
     console.log(exerciseInput);
     getExercise(exerciseInput);
   })
-
   //just trying to validate response
-  //$('#js-yelp-form').submit(event)
-  getYelpSearchCORS();
+  $('#js-yelp-form').submit(event => {
+    event.preventDefault();
+    let cuisineInput = $('#js-yelpCuisineSearchInput').val();
+    let locationInput = $('#js-yelpLocationSearchInput').val();
+    getYelpSearchCORS(cuisineInput,locationInput);
+  })
 }
 
 $(watchForm);
