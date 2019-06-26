@@ -104,7 +104,11 @@ li {
   font-size: 100%;
   padding-left: 5px;
   padding-right: 5px;
-  /*color: white;*/
+}
+
+/*style github, email, linkedin icons*/
+#icons {
+  color: white;
 }
 
 .hero-image {

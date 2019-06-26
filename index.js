@@ -1,7 +1,7 @@
 'use strict';
 
 /*add yelp logo, fix styling for yelp input bars (block on mobile, inline on desktop), 
-fix link colors in footer, add yelp functionality to hero text p, add max results to display to yelp*/
+fix link colors in footer, add yelp functionality to hero text p*/
 
 function displayNutrientResults (responseJson) {
     console.log(responseJson);
@@ -64,8 +64,11 @@ function displayYelpResults (responseJson) {
         //full name, description, website url
         `<li class="yelp_search_results"><h3>${responseJson.businesses[i].name}</h3>
             <p>Yelp Rating: ${responseJson.businesses[i].rating}</p>
-            <p>Address: ${responseJson.businesses[i].location}</p>
-            <p>Website: <a href=${responseJson.businesses[i].url}" target="blank">Restaurant Website</a></p>
+            <p class ="address"> 
+              ${responseJson.businesses[i].location.display_address[0]}<br>
+              ${responseJson.businesses[i].location.display_address[1]}
+            </p>
+            <p><a href=${responseJson.businesses[i].url}" target="blank">Restaurant Website</a></p>
         </li>`
       )};
     //display the results section  
