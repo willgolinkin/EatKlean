@@ -62,7 +62,7 @@ function displayYelpResults (responseJson) {
         `<li class="yelp_search_results"><h3>${responseJson.businesses[i].name}</h3>
             <p>Yelp Rating: ${responseJson.businesses[i].rating}</p>
             <p>Address: ${responseJson.businesses[i].location}</p>
-            <p>Website: <a href=${responseJson.businesses[i].url}" target="blank">${responseJson.businesses[i].url}</a></p>
+            <p>Website: <a href=${responseJson.businesses[i].url}" target="blank">Restaurant Website</a></p>
         </li>`
       )};
     //display the results section  
