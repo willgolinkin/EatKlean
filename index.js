@@ -1,5 +1,8 @@
 'use strict';
 
+/*add yelp logo, fix styling for yelp input bars (block on mobile, inline on desktop), 
+fix link colors in footer, add yelp functionality to hero text p, add max results to display to yelp*/
+
 function displayNutrientResults (responseJson) {
     console.log(responseJson);
     // if there are previous results, remove them
