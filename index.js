@@ -82,14 +82,14 @@ function formatQueryParams(params) {
 
 //using the CORS anywhere via AJAX, I am able to work around the lack of 
 //CORS in the Yelp Fusion API (https://cors-anywhere.herokuapp.com/)
-function getYelpSearchCORS(cuisine, location) {
+function getYelpSearchCORS(cuisine, location, numResults=3) {
   const key = 'Bearer e22MteLr3U7vSCAvs8z_IW1D4idyatIKLL7Nu9_A8WNLQK0zwAUTsHQPQAt-ETB8wZ-75nBmsAWlTSH_jhJSQ1s97dlsweUolaz47V1gF7Q8wTExQRFOZ0TS_IsRXXYx';
   const originalURL = 'https://api.yelp.com/v3/businesses/search';
-  let cuisineInput = $('#js-yelpCuisineSearchInput').val()
-  let locationInput = $('#js-yelpLocationSearchInput').val()
   const params = {
-    term: `${cuisineInput}`,
-    location: `${locationInput}`
+    term: `${cuisine}`,
+    location: `${location}`,
+    //maxResults argument in documentation (int)
+    limit: `${numResults}`
   };
   const queryString = formatQueryParams(params);
   const queryURL = "https://cors-anywhere.herokuapp.com/" + originalURL + '?' + queryString;
@@ -199,9 +199,11 @@ function watchForm() {
   //just trying to validate response
   $('#js-yelp-form').submit(event => {
     event.preventDefault();
-    let cuisineInput = $('#js-yelpCuisineSearchInput').val();
-    let locationInput = $('#js-yelpLocationSearchInput').val();
-    getYelpSearchCORS(cuisineInput,locationInput);
+    const cuisineInput = $('#js-yelpCuisineSearchInput').val();
+    const locationInput = $('#js-yelpLocationSearchInput').val();
+    const maxResults = $('#js-yelpMaxResults').val();
+    console.log(cuisineInput,locationInput,maxResults);
+    getYelpSearchCORS(cuisineInput,locationInput,maxResults);
   })
 }
 

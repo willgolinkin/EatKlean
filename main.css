@@ -184,6 +184,20 @@ input[type=submit] {
   border-radius: 4%;
 }
 
+/*style the input bar to look other inputs*/
+#js-yelpMaxResults {
+  text-align: center;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  padding: 5px 20px;
+  font-size: 16px;
+  margin: 8px 0;
+  border: 2px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 #results-list, #exercise-list {
   padding: 0;
 }
