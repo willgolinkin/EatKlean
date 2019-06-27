@@ -243,7 +243,8 @@ a:link {
 }
 
 a.emailMe {
-  color: blue;
+  color: orangered;
+  font-weight: bold;
 }
 
 a:visited {
