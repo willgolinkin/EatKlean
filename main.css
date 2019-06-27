@@ -1,3 +1,5 @@
+/*color scheme: green: #2FD817, blue: #172FD8, red: #D8172F*/
+
 * {
   box-sizing: border-box;
   /*normalize margins and padding*/
@@ -14,6 +16,7 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
+  /*set background color and font color to black and white*/
 }
 
 main {
@@ -23,7 +26,7 @@ main {
 
 nav {
   padding: 1% 0;
-  background-color:#5EB325;
+  background-color: #2FD817;
   width: 100%;
   color: white;
   border-radius: 1%;
@@ -45,7 +48,7 @@ footer {
   position: absolute;
   bottom: 0;*/
   font-size: 18px;
-  background-color:#5EB325;
+  background-color: #2FD817;
   width: 100%;
   color: white;
   border-radius: 1%;
@@ -169,21 +172,21 @@ li {
 input[type=text], select {
   text-align: center;
   width:100%;
-  background-color: whitesmoke;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 14px 20px;
   font-size: 16px;
   margin: 8px 0;
-  border: 2px solid gray;
+  /*border: 2px solid gray;*/
   border-radius: 4px;
   cursor: pointer;
 }
 
 input[type=submit] {
-  border: 2px solid gray;
+  border: 2px solid #172fd8;
   width: 100px;
   height: 30px;
-  background-color: #5EB325;
+  background-color: #172FD8;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -193,16 +196,20 @@ input[type=submit] {
   border-radius: 4%;
 }
 
+::placeholder {
+  color: white;
+}
+
 /*style the input bar to look other inputs*/
 #js-yelpMaxResults {
   text-align: center;
   width: 100%;
-  background-color: whitesmoke;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 5px 20px;
   font-size: 16px;
   margin: 8px 0;
-  border: 2px solid gray;
+  /*border: 2px solid gray;*/
   border-radius: 4px;
   cursor: pointer;
 }
@@ -230,12 +237,12 @@ input[type=submit] {
   margin-bottom: 10px;
   padding: 5px 5px;
   color: white;
-  background-color: #AC06B3;
+  background-color:#D8172F;
   width: 225px;
   /*style all results headers with the yelp font*/
   font-family: "Font Awesome 5 Brands";
   border-radius: 4%;
-  border: 2px solid black;
+  border: 2px solid #D8172F;
 }
 
 #yelp-list {
@@ -244,17 +251,17 @@ input[type=submit] {
 
 a:link {
   text-decoration: none;
-  color: blue;
+  color:#172FD8;
 }
 
 a.emailMe {
-  color: #AC06B3;
+  color: #172FD8;
   font-weight: bold;
 }
 
 a:visited {
   text-decoration: none;
-  color: #AC06B3;
+  color:purple;
 }
   
 button, input[type="text"] {
@@ -305,13 +312,17 @@ button:hover {
     padding-top: 0;
   }
 
+  footer {
+    font-size: 16px;
+  }
+
   /* Style the hamburger navigation menu */
   .hamburgerNav {
     display: block;
     overflow: hidden;
     position: relative;
     padding: 1% 0;
-    background-color:#5EB325;
+    background-color:#2FD817;
     width: 100%;
     color: white;
     border-radius: 1%;
@@ -335,7 +346,7 @@ button:hover {
 
   /* Style the hamburger menu */
   .hamburgerNav a.icon {
-    background: #5EB325;
+    background: #2FD817;
     display: block;
     position: absolute;
     right: 0;
@@ -346,12 +357,12 @@ button:hover {
 
   /* Add a grey background color on mouse-over */
   .fa-bars a:hover {
-    color: blue;
+    color: #172FD8;
   }
 
   /* Style the active link (or home/logo) */
   .active {
-    background-color: #4CAF50;
+    background-color: #2FD817;
     color: white;
     text-transform: uppercase;
     font-size: 26px;
