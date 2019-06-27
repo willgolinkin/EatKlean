@@ -180,10 +180,10 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  border: 2px solid orangered;
+  border: 2px solid gray;
   width: 100px;
   height: 30px;
-  background-color: orangered;
+  background-color: #5EB325;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -228,9 +228,13 @@ input[type=submit] {
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #5EB325;
+  padding: 5px 5px;
+  color: white;
+  background-color: #AC06B3;
   width: 225px;
   font-family: 'Rubik', sans-serif;
+  border-radius: 4%;
+  border: 2px solid black;
 }
 
 #yelp-list {
@@ -243,13 +247,13 @@ a:link {
 }
 
 a.emailMe {
-  color: orangered;
+  color: #AC06B3;
   font-weight: bold;
 }
 
 a:visited {
   text-decoration: none;
-  color: purple;
+  color: #AC06B3;
 }
   
 button, input[type="text"] {
