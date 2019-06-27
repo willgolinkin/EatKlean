@@ -37,7 +37,7 @@ nav {
 
 #content-wrap {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 footer {
@@ -140,7 +140,7 @@ li {
   text-transform: uppercase;
   /*responsive text sizing for hero text based off viewport size using viewport units (vw)*/
   /*2 vw = 2% of viewport width*/
-  font-size: calc(24px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(21px + (26 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .nutrients, .calories_burned, .yelp_search_results {
@@ -160,6 +160,11 @@ li {
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+/*#yelp, #yelp-list {
+  background-color: purple;
+  color: white;
+}*/
 
 input[type=text], select {
   text-align: center;
@@ -226,6 +231,10 @@ input[type=submit] {
   color: #5EB325;
   width: 225px;
   font-family: 'Rubik', sans-serif;
+}
+
+#yelp-list {
+  padding: 0 !important;
 }
 
 a:link {
