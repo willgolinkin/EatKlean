@@ -92,7 +92,8 @@ function getYelpSearchCORS(cuisine, location, numResults=3) {
     term: `${cuisine}`,
     location: `${location}`,
     //maxResults argument in documentation (int)
-    limit: `${numResults}`
+    limit: `${numResults}`,
+    sort_by: 'distance'
   };
   const queryString = formatQueryParams(params);
   const queryURL = "https://cors-anywhere.herokuapp.com/" + originalURL + '?' + queryString;
