@@ -1,8 +1,6 @@
 'use strict';
 
-/*add yelp logo, fix styling for yelp input bars (block on mobile, inline on desktop), 
-fix link colors in footer, add yelp functionality to hero text p*/
-
+//display results of Nutritionix Natural Nutrients API Call
 function displayNutrientResults (responseJson) {
     console.log(responseJson);
     // if there are previous results, remove them
@@ -23,7 +21,6 @@ function displayNutrientResults (responseJson) {
   }
 
 function getFood (food) {
-    /*let foodSearchQuery = $('#js-foodSearchInput').val();*/
     const key = '1f2cf89d3bcd0b21bf0dc8a2c0432300';
     const appId = '3add8282';
     const endpointUrl = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
@@ -115,7 +112,7 @@ function getYelpSearchCORS(cuisine, location, numResults=3) {
   })
 }
 
-//Nutritionix Natural Exercise API Call
+//display results of Nutritionix Natural Exercise API Call
 function displayExerciseResults (responseJson) {
     console.log(responseJson);
     // if there are previous results, remove them
@@ -163,8 +160,6 @@ function getExercise(exercise) {
       console.log(error);
     });
 };
-
-//add YouTube code here:
 
 //uses innerWidth method as a conditional for displaying hamburger nav
 function showHamburgerNav () {

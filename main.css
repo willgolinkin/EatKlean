@@ -16,7 +16,6 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  /*set background color and font color to black and white*/
 }
 
 main {
@@ -35,7 +34,6 @@ nav {
 #page-container {
   position: relative;
   min-height: 100%;
-  /*margin-bottom: -50px;*/
 }
 
 #content-wrap {
@@ -44,9 +42,6 @@ nav {
 }
 
 footer {
-  /*need it to scroll and stay pinned to bottom
-  position: absolute;
-  bottom: 0;*/
   font-size: 18px;
   background-color: #2FD817;
   width: 100%;
@@ -97,7 +92,6 @@ nav {
 .nav_links li {
   /*allows me to color and size font awesome icons*/
   color: #ffffff;
-  /*text-shadow: 1px 1px 1px white;*/
   font-size: 1.25em;
   }
 
@@ -150,7 +144,6 @@ li {
   color: black;
 }
 
-/*need help figuring a way to stack in mobile and inline block in desktop*/
 .label {
   font-size: 24px;
   text-transform: uppercase;
@@ -164,11 +157,7 @@ li {
   margin-bottom: 20px;
 }
 
-/*#yelp, #yelp-list {
-  background-color: purple;
-  color: white;
-}*/
-
+/*style inputs with black backgrounds and white font*/
 input[type=text], select {
   text-align: center;
   width:100%;
@@ -177,11 +166,11 @@ input[type=text], select {
   padding: 14px 20px;
   font-size: 16px;
   margin: 8px 0;
-  /*border: 2px solid gray;*/
   border-radius: 4px;
   cursor: pointer;
 }
 
+/*style go buttons*/
 input[type=submit] {
   border: 2px solid #172fd8;
   width: 100px;
@@ -196,11 +185,12 @@ input[type=submit] {
   border-radius: 4%;
 }
 
+/*style placeholder text*/
 ::placeholder {
   color: white;
 }
 
-/*style the input bar to look other inputs*/
+/*style the maxResults type="number" input bar to look other inputs*/
 #js-yelpMaxResults {
   text-align: center;
   width: 100%;
@@ -209,7 +199,6 @@ input[type=submit] {
   padding: 5px 20px;
   font-size: 16px;
   margin: 8px 0;
-  /*border: 2px solid gray;*/
   border-radius: 4px;
   cursor: pointer;
 }
@@ -290,7 +279,7 @@ button:hover {
 }
 
 
- /* for any screen larger than 630px*/
+ /*376-630px screen size tablet sizing*/
 @media screen and (max-width: 630px) {
   /*hides fullSiteNames below 630px width*/
   li span {
@@ -302,6 +291,7 @@ button:hover {
   }
 }
 
+/*mobile styling*/
 @media screen and (max-width: 375px) {
   /*hides desktopNav*/
   #desktop_nav {
@@ -312,6 +302,7 @@ button:hover {
     padding-top: 0;
   }
 
+  /*make font slightly smaller for mobile view*/
   footer {
     font-size: 16px;
   }
