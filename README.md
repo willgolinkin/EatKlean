@@ -3,10 +3,10 @@ EatKlean
 link: https://willgolinkin.github.io/EatKlean/
 
 Desktop Home Page:
-![EatKlean Home Page Screenshot_compressed](https://user-images.githubusercontent.com/49488545/60307858-65edf500-9914-11e9-8401-e7a12af1102e.png)
+![EatKlean Home Page Screenshot_compressed](https://user-images.githubusercontent.com/49488545/60372086-698f8380-99c9-11e9-9065-4c6ef51a2bf9.png)
 
 Desktop Search Results:
-![EatKlean Search Results Screenshot_compressed](https://user-images.githubusercontent.com/49488545/60307859-65edf500-9914-11e9-85cd-f92e530b7923.png)
+![EatKlean Search Results Screenshot_compressed](https://user-images.githubusercontent.com/49488545/60372087-698f8380-99c9-11e9-896f-0d431e730895.png)
 
 App Description:
 
