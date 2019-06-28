@@ -104,7 +104,7 @@ li {
 }
 
 /*style github, email, linkedin icons*/
-#icons {
+#email, #github, #linkedin {
   color: white;
 }
 
@@ -240,7 +240,7 @@ input[type=submit] {
 
 a:link {
   text-decoration: none;
-  color:#172FD8;
+  /*color:#172FD8;*/
 }
 
 a.emailMe {
@@ -250,7 +250,7 @@ a.emailMe {
 
 a:visited {
   text-decoration: none;
-  color:purple;
+  /*color:purple;*/
 }
   
 button, input[type="text"] {
