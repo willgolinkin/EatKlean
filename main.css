@@ -229,7 +229,7 @@ input[type=submit] {
   background-color:#D8172F;
   width: 225px;
   /*style all results headers with the yelp font*/
-  font-family: "Font Awesome 5 Brands";
+  font-family: 'Font Awesome 5 Brands';
   border-radius: 4%;
   border: 2px solid #D8172F;
 }
