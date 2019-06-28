@@ -243,6 +243,11 @@ a:link {
   /*color:#172FD8;*/
 }
 
+/*having trouble overriding this*/
+a.nav_links {
+  color: white !important;
+}
+
 a.emailMe {
   color: #172FD8;
   font-weight: bold;
@@ -346,7 +351,7 @@ button:hover {
     height: 100%;
   }
 
-  /* Add a grey background color on mouse-over */
+  /* Add a blue background color on mouse-over */
   .fa-bars a:hover {
     color: #172FD8;
   }
